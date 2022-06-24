@@ -1,0 +1,34 @@
+V1 - Main menu, saving player name, basic functions
+Added main menu with clickable buttons (opening game or highscores) and saving player name which the app remembers even when closed.
+
+V2 - Added game objects (Snake, Apple), canvas drawing
+Added game objects Snake and Apple which use body Blocks to identify their position around map.
+At the beginning snake and apple spawn at random position and then snake moves 5x a second over the canvas and if it hits an apple, new apple spawns.
+So far there is not implement maneuvering, so snake is going in direction given at spawn.
+Game draws current state of game on the Canvas.
+Main menu now has own Snake logo and in highscores there is also prepared UI for later use.
+
+V3 - Game stats (score, time), mute button and swipe
+Added game stats of score and time which will be later used in highscores.
+Added mute button on canvas which when clicked on uses callback to mute/unmute (sound effects will be implemented later).
+Added maneuvering by swipe to control snake over map.
+
+V4 - Added sound effects and GPS support
+Added sound effects for snake hitting itself, eating apple or changing direction of movement.
+Sound effects can be muted at any time by clicking on mute button which toggles between mute and unmute state.
+Added GPS support for later use in highscores. GPS permission can be disabled and is being asked for when the game is over.
+
+V5 - Added highscores (save, sort and display)
+Added support for highscores.
+Highscores are saved when game ends and then displayed in new window. Highscores are sorted before they are displayed on screen.
+Highscores can be also displayed from the main menu by clicking on "Highscores" button.
+Highscores contain all useful data such as player's name, score, time and GPS location.
+
+V6 - Added app icon, fixed GPS and game resetting
+Added custom app icon of Snake.
+Fixed GPS location (previously not working properly).
+Fixed bug - game reset when window focus changed.
+Fixed - thread was not interrupted when game ended.
+
+V7 - Fixed thread use
+Added onResume and onPause methods for properly controlling life of thread.
